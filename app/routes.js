@@ -2,7 +2,7 @@ module.exports = function (app, passport, SERVER_SECRET) {
 
 	// default message
 	app.get('/endpoint/v1/', function (req, res) {
-		res.json(
+		return res.json(
 			{ status: 'success', message: 'Welcome to the database' }
 			// '<html><body><p>Welcome to the database</p></body></html>'
 		);
