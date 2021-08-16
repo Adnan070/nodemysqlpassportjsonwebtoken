@@ -13,7 +13,7 @@ var port = process.env.PORT || 5000;
 var passport = require('passport');
 var flash = require('connect-flash');
 var fs = require('fs');
-var https = require('https');
+var http = require('http');
 
 // config passport and connect to DB
 // require('./config/passport')(passport);
