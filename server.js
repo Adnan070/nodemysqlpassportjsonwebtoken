@@ -16,7 +16,7 @@ var fs = require('fs');
 var https = require('https');
 
 // config passport and connect to DB
-require('./config/passport')(passport);
+// require('./config/passport')(passport);
 
 // set up express
 // app.use(cors());
@@ -41,8 +41,8 @@ app.use(session({
 	resave: false,
 	saveUninitialized: true
 })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 
