@@ -2,10 +2,15 @@ module.exports = function (app, passport, SERVER_SECRET) {
 
 	// default message
 	app.get('/endpoint/v1/', function (req, res) {
-		return res.json(
+		try {
+			return res.json(
 			{ status: 'success', message: 'Welcome to the database' }
 			// '<html><body><p>Welcome to the database</p></body></html>'
 		);
+		
+		} catch(err) {
+			console.log(err.message)
+		}
 	});
 
 	// =========== authenticate login info and generate access token ===============
