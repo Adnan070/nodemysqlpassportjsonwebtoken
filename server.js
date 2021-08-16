@@ -58,6 +58,6 @@ const SERVER_SECRET = 'harisServerSecret';
 require('./app/routes.js')(app, passport, SERVER_SECRET); // load our routes and pass in our app and fully configured passport
 
 // Create server
-https.createServer(options, app).listen(port, function () {
+http.createServer(options, app).listen(port, function () {
 	console.log('Server listening on port ' + port);
 });
